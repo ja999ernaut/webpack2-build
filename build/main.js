@@ -78,7 +78,7 @@
 	array.forEach(function(item) {
 		listItems += '<li>' + item + '</li>';
 	});
-	menu.ineerHTML = listItems;
+	menu.innerHTML = listItems;
 	return menu;
 });;
 
@@ -90,7 +90,7 @@
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menu__ = __webpack_require__(0);
 
-var menu = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__menu__["a" /* default */])(['Главная', 'Обо мне', 'Портфолио'], 'menu');
+var menu = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__menu__["a" /* default */])(['Главная', 'Обо мне', 'Портфолио', 'Контакты'], 'menu');
 document.body.appendChild(menu);
 
 /***/ })

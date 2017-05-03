@@ -5,6 +5,6 @@ export default function (array, className) {
 	array.forEach(function(item) {
 		listItems += '<li>' + item + '</li>';
 	});
-	menu.ineerHTML = listItems;
+	menu.innerHTML = listItems;
 	return menu;
 };
