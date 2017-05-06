@@ -91,7 +91,7 @@
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_menu_menu__ = __webpack_require__(0);
 
-var menu = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__components_menu_menu__["a" /* default */])(['Главная','Блог', 'Контакты'], 'menu');
+var menu = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__components_menu_menu__["a" /* default */])(['Главная','Блог','Портфолио','Контакты'], 'menu');
 document.body.appendChild(menu);
 
 console.log('in index.js');
