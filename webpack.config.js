@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const pug = require('./webpack/pug');
@@ -32,7 +33,14 @@ const common = merge([
 	            filename: 'blog.html',
 	            chunks: ['blog', 'common'],
 	            template: PATHS.source + '/pages/blog/blog.pug'
-	        })
+	        }),
+	        new webpack.optimize.CommonsChunkPlugin({
+	        	name: 'common'
+	        }),
+	        new webpack.ProvidePlugin({
+                $: 'jquery',
+                jQuery: 'jquery'
+            })
 		]
 	},
 	pug()
