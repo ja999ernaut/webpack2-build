@@ -5,7 +5,8 @@ const merge = require('webpack-merge');
 const pug = require('./webpack/pug');
 const devserver = require('./webpack/devserver');
 const sass = require('./webpack/sass');
-const css = require('./webpack/css.js');
+const css = require('./webpack/css');
+const lintCSS = require('./webpack/stylelint');
 const extractCSS = require('./webpack/css.extract');
 const uglifyJS = require('./webpack/js.uglify');
 const images = require('./webpack/images');
@@ -37,7 +38,8 @@ const common = merge([
 	            template: PATHS.source + '/pages/blog/blog.pug'
 	        }),
 	        new webpack.optimize.CommonsChunkPlugin({
-	        	name: 'common'
+	        	name: 'common',
+	        	minChunks: 2
 	        }),
 	        new webpack.ProvidePlugin({
                 $: 'jquery',
@@ -46,6 +48,7 @@ const common = merge([
 		]
 	},
 	pug(),
+	lintCSS(),
 	images()
 ]);
 

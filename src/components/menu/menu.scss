@@ -2,7 +2,9 @@ ul {
 	border: 3px solid pink;
 	li {
 		display: inline-block;
-		padding: 5px 10px;
-		background: yellow;
+		padding: 5px 20px;
+		background: pink;
+		color: red;
+		text-transform: uppercase;
 	}
 }
