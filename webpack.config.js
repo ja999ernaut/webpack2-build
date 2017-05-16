@@ -9,6 +9,7 @@ const css = require('./webpack/css');
 const lintCSS = require('./webpack/stylelint');
 const extractCSS = require('./webpack/css.extract');
 const uglifyJS = require('./webpack/js.uglify');
+const babel = require('./webpack/babel');
 const images = require('./webpack/images');
 
 const PATHS = {
@@ -43,11 +44,14 @@ const common = merge([
 	        }),
 	        new webpack.ProvidePlugin({
                 $: 'jquery',
-                jQuery: 'jquery'
+                jQuery: 'jquery',
+                React: 'react',
+                ReactDOM: 'react-dom'
             })
 		]
 	},
 	pug(),
+	babel(),
 	lintCSS(),
 	images()
 ]);
