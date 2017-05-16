@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --env development",
     "build": "webpack --env production",
-    "server": "static build",
+    "server": "static dist",
     "analyse": "webpack --env production --json --profile >stats.json"
   },
   "devDependencies": {

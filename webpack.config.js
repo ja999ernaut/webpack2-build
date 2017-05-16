@@ -14,7 +14,7 @@ const images = require('./webpack/images');
 
 const PATHS = {
 	source: path.join(__dirname, 'src'),
-	build: path.join(__dirname, 'build')
+	build: path.join(__dirname, 'dist')
 };
 
 const common = merge([
